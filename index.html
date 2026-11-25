@@ -26,6 +26,10 @@
         </div>
       </div>
       <div class="topbar-actions">
+        <div class="sync-status sync-connecting" id="syncStatus" title="Status da sincronização">
+          <span class="sync-dot"></span>
+          <span id="syncLabel">Conectando...</span>
+        </div>
         <button type="button" class="btn btn-ghost" id="btnExport">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v3h16v-3" />
@@ -230,8 +234,7 @@
         </div>
       </section>
 
-      <p class="app-footer">Os dados ficam salvos no banco local do navegador (IndexedDB). Use <strong>Backup</strong>
-        para salvar uma cópia em arquivo JSON.</p>
+      <p class="app-footer" id="appFooter">Conectando ao servidor...</p>
     </main>
   </div>
 
@@ -251,6 +254,8 @@
 
   <input type="file" id="fileInput" accept=".csv,.json,text/csv,application/json" hidden>
 
+  <script src="google-sheets-config.js"></script>
+  <script src="firebase-config.js"></script>
   <script src="app.js"></script>
 </body>
 
